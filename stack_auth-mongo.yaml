@@ -1,0 +1,34 @@
+version: "3.7"
+services:
+
+  auth:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    container_name: auth-srv
+    command: "/app/auth-srv"
+    environment:
+      AUTH_PORT_4000_TCP_PORT: 4000
+      AUTH_PORT_3000_TCP_PORT: 3000
+    depends_on: 
+      - mongo
+    ports:
+      - 3001:3000
+      - 4000:4000
+
+  mongo:
+    image: "mongo:4.2.21"
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  mongo-express:
+    image: "mongo-express:1.0.0-alpha"
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
