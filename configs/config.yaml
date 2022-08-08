@@ -1,0 +1,29 @@
+# config.yaml
+# JWT secret, mondo DSN and a list of users capable of authorization
+
+jwt:
+  secret: "super-secret-key"
+
+mongo:
+  connection-string: "mongodb://root:example@127.0.0.1:27017"
+
+users:
+  test123:
+    login: "test123"
+    uuid: "8a1aea42-5494-43b8-905d-51ceb2d0a2f1"
+    pass-hash: "$2a$10$kXW5gA4Hq3EibpnVXr0NIOux1NvWi9wyTYtt6EciXtVy0WJtzhYq6" # qwerty
+
+  user_1:
+    login: "user_1"
+    uuid: "f700be7b-d722-42a3-8f2e-6e90d3425104"
+    pass-hash: "$2a$10$pzYCOpe.BXnCmMpCPUZhK.rW0deENGxmGqOS/IgoWaNzkmilptmAC" # password_1
+
+  user_2:
+    login: "user_2"
+    uuid: "e733b869-9a54-4f5e-ade4-9226baae496e"
+    pass-hash: "$2a$10$.p98r3yKO4HJzUKtQDW.8ObsNCKr/eab9Bl0M6co3h/s0Q4zKsOVi" # password_2
+
+  user_3:
+    login: "user_3"
+    uuid: "61b4f0ad-2e49-4f9b-8f10-23b78f0f33db"
+    pass-hash: "$2a$10$KtPPyFAvBARAeQ8ZdKXVY.4Fn83nWmGpqviISu4JXxYylbzo8HjRe" # password_3
