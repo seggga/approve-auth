@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"gitlab.com/g6834/team9/auth/internal/entity"
+	"github.com/seggga/approve-auth/internal/entity"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"

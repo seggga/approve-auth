@@ -1,6 +1,6 @@
 package storage
 
-import "gitlab.com/g6834/team9/auth/internal/entity"
+import "github.com/seggga/approve-auth/internal/entity"
 
 // UserStorage represents storage with basic operations
 type UserStorage interface {

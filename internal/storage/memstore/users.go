@@ -14,7 +14,7 @@ import (
 	"fmt"
 	"sync"
 
-	"gitlab.com/g6834/team9/auth/internal/entity"
+	"github.com/seggga/approve-auth/internal/entity"
 )
 
 // Store ...

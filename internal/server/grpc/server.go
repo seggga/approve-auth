@@ -8,11 +8,10 @@ import (
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
 
-	"gitlab.com/g6834/team9/auth/internal/storage"
-	"gitlab.com/g6834/team9/auth/internal/tokens"
+	"github.com/seggga/approve-auth/internal/storage"
+	"github.com/seggga/approve-auth/internal/tokens"
 
-	// pb "gitlab.com/g6834/team9/protobuf/authservice"
-	pb "gitlab.com/g6834/team9/auth/pkg/proto"
+	pb "github.com/seggga/approve-auth/pkg/proto"
 )
 
 var _ pb.AuthAPIServer = &Server{}
